@@ -9,8 +9,9 @@ export const AnimalProvider = (props) => { // not all machinery in the warehouse
 
     const getAnimals = () => {
         return fetch("http://localhost:8088/animals?_expand=location")
-        .then(res => res.json())
-        .then((data)=> setAnimals(data))
+            .then(res => res.json())
+            .then(setAnimals)
+           // .then((data) => setAnimals(data))
     }
 
     const addAnimal = animalObj => {
@@ -21,7 +22,7 @@ export const AnimalProvider = (props) => { // not all machinery in the warehouse
             },
             body: JSON.stringify(animalObj)
         })
-        .then(getAnimals)
+            .then(getAnimals)
     }
 
     /*
@@ -31,7 +32,7 @@ export const AnimalProvider = (props) => { // not all machinery in the warehouse
         allows any child elements to access them.
     */
 
-        // now we expose what this component will expose to other components: 
+    // now we expose what this component will expose to other components: 
     return (
         <AnimalContext.Provider value={{ // it is THIS object that is available to other components, not the functions
             animals, getAnimals, addAnimal // 
