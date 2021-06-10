@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { Kennel } from "./components/Kennel"
-// import { LocationProvider } from ".components/locations/LocationProvider"
+import { Kennel } from "./components/Kennel";
+import { LocationProvider } from "./components/locations/LocationProvider"
+
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      {/* <LocationProvider /> */}
+      <LocationProvider />
       <Kennel />
     </Router>
   </React.StrictMode>,

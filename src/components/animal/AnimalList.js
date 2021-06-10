@@ -26,7 +26,7 @@ export const AnimalList = () => {
                     animal => { // let's iterate over the animals array and create
                     // html for each
                     return (
-                        <div className="animal" id={`animal--${animal.id}`}>
+                        <div className="animal" key={`animal--${animal.id}`}>
                             <div className="animal__name">
                                 Name: {animal.name}
                             </div>

@@ -34,9 +34,9 @@ export const Kennel = () => (
         </article>
         <h2>Locations</h2>
         <article className="locations">
-            {/* <LocationProvider>
+            <LocationProvider>
                 <LocationList />
-            </LocationProvider> */}
+            </LocationProvider>
         </article>
         <h2>Employees</h2>
         <article className="employees">

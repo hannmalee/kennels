@@ -1,4 +1,7 @@
 import { useContext, useEffect } from "react";
+import React from "react";
+import "./locations.css";
+import { LocationContext } from "./LocationProvider";
 
 
 
