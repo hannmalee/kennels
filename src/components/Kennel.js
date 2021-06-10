@@ -4,9 +4,16 @@ import { ApplicationViews } from "./ApplicationViews"
 import { AnimalProvider } from "./animal/AnimalProvider"
 import { AnimalList } from "./animal/AnimalList"
 import { Animal } from "./animal/Animal"
+import { LocationProvider } from "./locations/LocationProvider"
+import { LocationList } from "./locations/LocationList"
+import { CustomerList } from "./customers/CustomerList"
+import { CustomerProvider } from "./customers/CustomerProvider"
+import { EmployeeProvider } from "./employees/EmployeeProvider"
+import { EmployeeList } from "./employees/EmployeeList"
 import "./Kennel.css"
 
 export const Kennel = () => (
+
     <>
        
         <NavBar />
@@ -27,22 +34,22 @@ export const Kennel = () => (
         </article>
         <h2>Locations</h2>
         <article className="locations">
-            <LocationProvider>
+            {/* <LocationProvider>
                 <LocationList />
-            </LocationProvider>
+            </LocationProvider> */}
         </article>
         <h2>Employees</h2>
         <article className="employees">
-            <EmployeeProvider>
+            {/* <EmployeeProvider>
                 <EmployeeList />
-            </EmployeeProvider>
+            </EmployeeProvider> */}
 
         </article>
         <h2>Customers</h2>
         <article className="customers">
-            <CustomerProvider>
+            {/* <CustomerProvider>
                 <CustomerList />
-            </CustomerProvider>
+            </CustomerProvider> */}
 
         </article>
     </>

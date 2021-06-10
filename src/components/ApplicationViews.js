@@ -1,15 +1,18 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { AnimalList } from "./animal/AnimalList"
+import { AnimalProvider } from "./animal/AnimalProvider"
+
 
 export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <LocationProvider>
+            {/* <LocationProvider>
                 <Route exact path="/">
                     <LocationList />
                 </Route>
-            </LocationProvider>
+            </LocationProvider> */}
 
             {/* Render the animal list when http://localhost:3000/animals */}
             <AnimalProvider>
