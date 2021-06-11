@@ -13,7 +13,8 @@ export const CustomerProvider = (props) => { // not all machinery in the warehou
             .then(setCustomer)
            // .then((data) => setAnimals(data))
     }
-    const addCustomer = customerObj => {
+
+    const addCustomer = (customerObj) => {
         return fetch("http://localhost:8088/customers", {
             method: "POST",
             headers: {
@@ -23,6 +24,7 @@ export const CustomerProvider = (props) => { // not all machinery in the warehou
         })
             .then(getCustomers)
     }
+
     /*
         You return a context provider which has the
         `animals` state, `getAnimals` function,
@@ -32,11 +34,11 @@ export const CustomerProvider = (props) => { // not all machinery in the warehou
 
     // now we expose what this component will expose to other components: 
     return (
-        <CustomerProvider.Provider value={{ // it is THIS object that is available to other components, not the functions
+        <CustomerContext.Provider value={{ // it is THIS object that is available to other components, not the functions
             customers, getCustomers, addCustomer  // 
         }}>
             {props.children}
-        </CustomerProvider.Provider>
+        </CustomerContext.Provider>
     )
 }
 

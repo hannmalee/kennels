@@ -15,10 +15,10 @@ import "./Kennel.css"
 export const Kennel = () => (
 
     <>
-       
+
         <NavBar />
         <ApplicationViews />
-    
+
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>
         <address>
@@ -40,16 +40,16 @@ export const Kennel = () => (
         </article>
         <h2>Employees</h2>
         <article className="employees">
-            {/* <EmployeeProvider>
+            <EmployeeProvider>
                 <EmployeeList />
-            </EmployeeProvider> */}
+            </EmployeeProvider>
 
         </article>
         <h2>Customers</h2>
         <article className="customers">
-            {/* <CustomerProvider>
+            <CustomerProvider>
                 <CustomerList />
-            </CustomerProvider> */}
+            </CustomerProvider>
 
         </article>
     </>
