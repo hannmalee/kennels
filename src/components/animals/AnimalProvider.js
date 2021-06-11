@@ -22,7 +22,7 @@ export const AnimalProvider = (props) => { // not all machinery in the warehouse
             },
             body: JSON.stringify(animalObj)
         })
-            .then(getAnimals)
+            .then(response => response.json())
     }
 
     /*

@@ -4,6 +4,7 @@ import { AnimalContext } from "./AnimalProvider" // imports the context object f
 // so that useContext hook can access the object
 import "./Animal.css"
 
+
 // useContext hook allows us to use data structures and functions that a 
 // parent provider component exposes 
 // useEffect allows the component to reach out for anything that can't be handled during render
@@ -19,7 +20,9 @@ export const AnimalList = () => {
         getAnimals()
     }, []) // empty brackets are the dependency array. 
 
+
     const history = useHistory()
+
 
     return (
         <>
