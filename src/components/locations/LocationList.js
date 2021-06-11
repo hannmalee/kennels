@@ -20,6 +20,9 @@ export const LocationList = () => {
 
 
     return (
+
+        <>
+        <h2>Locations</h2>
         <section className="locations">
             {
                 locations.map(
@@ -38,5 +41,6 @@ export const LocationList = () => {
                 })
             }
         </section>
+        </>
     )
 };

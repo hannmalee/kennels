@@ -20,6 +20,8 @@ export const CustomerList = () => {
 
 
     return (
+        <>
+        <h2>Customers</h2>
         <section className="customers">
             {
                 customers.map(
@@ -40,5 +42,6 @@ export const CustomerList = () => {
                 })
             }
         </section>
+        </>
     )
 };

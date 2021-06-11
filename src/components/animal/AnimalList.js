@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react"
+import { useHistory } from "react-router-dom";
 import { AnimalContext } from "./AnimalProvider" // imports the context object from the provider 
 // so that useContext hook can access the object
 import "./Animal.css"
@@ -18,25 +19,34 @@ export const AnimalList = () => {
         getAnimals()
     }, []) // empty brackets are the dependency array. 
 
+    const history = useHistory()
 
     return (
-        <section className="animals">
-            {
-                animals.map(
-                    animal => { // let's iterate over the animals array and create
-                    // html for each
-                    return (
-                        <div className="animal" key={`animal--${animal.id}`}>
-                            <div className="animal__name">
-                                Name: {animal.name}
+        <>
+            <h2>Animals</h2>
+         
+            <button onClick={
+                () => history.push("/animals/create")
+            }>
+                Add Animal
+            </button>
+            
+            <div className="animals">
+                {
+                    animals.map(animal => {
+                        return (
+                            <div className="animal" id={`animal--${animal.id}`}>
+                                <div className="animal__name">
+                                    Name: {animal.name}
+                                </div>
+                                <div className="animal__breed">
+                                    Breed: {animal.breed}
+                                </div>
                             </div>
-                            <div className="animal__breed">
-                                Breed: {animal.breed}
-                            </div>
-                        </div>
-                    )
-                })
-            }
-        </section>
+                        )
+                    })
+                }
+            </div>
+        </>
     )
-};
+}

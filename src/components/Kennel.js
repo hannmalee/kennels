@@ -26,28 +26,31 @@ export const Kennel = () => (
             <div>500 Puppy Way</div>
         </address>
 
-        <h2>Animals</h2>
         <article className="animals">
             <AnimalProvider>
+        
                 <AnimalList />
             </AnimalProvider>
         </article>
-        <h2>Locations</h2>
+
         <article className="locations">
             <LocationProvider>
+            
                 <LocationList />
             </LocationProvider>
         </article>
-        <h2>Employees</h2>
+       
         <article className="employees">
             <EmployeeProvider>
+           
                 <EmployeeList />
             </EmployeeProvider>
 
         </article>
-        <h2>Customers</h2>
+       
         <article className="customers">
             <CustomerProvider>
+           
                 <CustomerList />
             </CustomerProvider>
 

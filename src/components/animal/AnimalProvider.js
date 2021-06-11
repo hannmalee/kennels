@@ -8,7 +8,7 @@ export const AnimalProvider = (props) => { // not all machinery in the warehouse
     const [animals, setAnimals] = useState([]) // the sole purpose of useState is to establish an application state variable. it gives us a variable (first item in parenthsis) it gives us a function to change the state (second item in parenthesis)
 
     const getAnimals = () => {
-        return fetch("http://localhost:8088/animals?_expand=location")
+        return fetch("http://localhost:8088/animals?_expand=customer&expand=location&sort=location.id")
             .then(res => res.json())
             .then(setAnimals)
            // .then((data) => setAnimals(data))
